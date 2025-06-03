@@ -62,7 +62,7 @@ bash
 npm run dev
 ```
 
-##⚠️ Important Notes
+## ⚠️ Important Notes
 
 Ensure you have a valid Gemini API key from Google.
 
