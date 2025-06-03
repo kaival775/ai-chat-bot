@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CybrixAi</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("pic5.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .smoke span:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .smoke span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    .smoke span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    .smoke span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    .smoke span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    .smoke span:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    .smoke span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+    .smoke {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    p {
+      font-size: 80px;
+      animation: pulse 1s infinite;
+      position: static;
+
+      color: #fff;
+      text-align: center;
+      font-family: poppins;
+    }
+    .smoke span {
+      position: relative;
+      color: #fff;
+      font-family: poppins;
+      font-weight: bold;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      font-size: 80px;
+      animation: animate 3s linear infinite;
+    }
+    @keyframes animate {
+      0% {
+        filter: blur(0);
+      }
+      40% {
+        filter: blur(15px);
+      }
+      80% {
+        filter: blur(0);
+      }
+      100% {
+        filter: blur(0);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        opacity: 0.2;
+      }
+
+      50% {
+        opacity: 3;
+      }
+
+      100% {
+        opacity: 0.2;
+      }
+    }
+  </style>
+  <body>
+    <p>CybrixAi</p>
+    <!-- <div class="smoke">
+      <span>L</span>
+      <span>o</span>
+      <span>a</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+    </div> -->
+    <script>
+      setTimeout(() => {
+        // Redirect to the next page
+        window.location.href = "http://localhost:5173/"; // Change to your desired page URL
+      }, 5000); // Change 2000 to the desired loading time in millisecond
+    </script>
+  </body>
+</html>

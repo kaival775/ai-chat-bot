@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "shortcut icon" type="x-icon" href="./LOGO.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybrix</title>
+    <link rel="stylesheet" href="cstyle.css" />
+</head>
+<body>
+    <section class="hero">
+        <div class="nav">
+            <p>Your Intelligent Partner for Transformative Solutions and Seamless Interactions.
+            </p>
+        </div>
+
+
+        <div class="header">
+            <div class="header-text">
+                <h1>CYBRIX</h1>
+            </div>
+            <div class="cta">
+                <button id="toggle">Contact</button>
+            </div>
+        </div>
+
+        <div class="tagline">
+            <p>Transformative Technology, Intuitive Interfaces, and Unmatched Capabilities at Your Fingertips.
+            </p>
+        </div>
+
+        <div class="links">
+            <button onclick="redirect()">Instagram</button>
+            <button onclick="redirect1()">Twitter</button>
+        </div>
+    </section>
+
+    <div class="overlay">
+        <div class="col">
+            <div class="logo">
+                <a href="#">Cybrix</a>
+            </div>
+
+            <div class="form">
+                <form action="">
+                    <label for="fname">Name* </label>
+                    <input type="text" id="fname" name="fname" placeholder="first + surname" />
+                    <br /><br />
+
+                    <label for="fname">Location* </label>
+                    <input type="text" id="location" name="location" placeholder="e.g. India" />
+                    <br /><br />
+
+                    <label for="fname">Email Id* </label>
+                    <input type="text" id="email" name="email" placeholder="abc@gmail.com" />
+                    <br /><br />
+
+                    <label for="jobs">Disciplines</label>
+                    <div class="jobs">
+                        <div class="job-items">
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">User ID</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Visitor Type</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Tracking Behavior</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Knowledge Learned</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Designed for Goals</label>
+                            </div>
+                        </div>
+
+
+                        <div class="job-items">
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Sending to Right Place</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Scheduling Meets</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Live Talk Option</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Tracking Actions</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox">
+                                <label for="">Routing Capabilities</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button>Send Application</button> -->
+                    <button type="submit" onclick="sendToWhatsApp(); return false;">Send Application</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="copy">
+                <p>[cybrix info]</p>
+                <p id="back">[back]</p>
+            </div>
+            <div class="about">
+                <p>Cybrix AI is an innovative platform dedicated to developing advanced AI software and custom GPT solutions.
+                </p>
+            </div>
+
+            <div class="send">
+                <h1>Apply</h1>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="cscript.js"></script>
+</body>
+</html>

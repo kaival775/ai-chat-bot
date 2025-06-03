@@ -1,0 +1,396 @@
+@import url('https://db.onlinewebfonts.com/c/4017717e66a57d9753d726702f3ad6d8?family=Roaring+Jungle');
+@import url('https://fonts.cdnfonts.com/css/carpenter');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    /* background: url(pic4.gif); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding: 0 1em;
+}
+
+nav{
+  padding-left: 40rem;
+  padding-top: 10px;
+}
+
+nav > div {
+    flex: 1;
+}
+
+.getstartedbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.header .h1 {
+    position: relative;
+    font-family: "Roaring Jungle";
+    font-size: 33vw;
+    /* color: #f5f5f5; */
+    line-height: 1.125;
+    text-align: center;
+    z-index: 0.5;
+    display: inline-block;
+        margin: 0;
+        /* background-color: #2f8d46; */
+        background-image: url('download\ \(1\).gif');
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        
+}
+
+.hero {
+    position: relative;
+    width: calc(100vw - 4em);
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 4px solid #1a1a1a;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+}
+
+.bar {
+    width: 100vw;
+    height: 105vh;
+    background: #1a1a1a;
+    opacity: 100%;
+    z-index: 4;
+}
+
+.counter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 2;
+    color: #bcbcbcc4;
+    padding: 0.2em 0.4em;
+    font-size: 20vw;
+    font-family: 'carpenter', sans-serif;
+}
+
+p {
+    font-family: "Neue Montreal";
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+    /* Apply the blur effect */
+    transition: backdrop-filter 3s ease;
+    /* Smooth transition */
+}
+
+a {
+    text-decoration: none;
+    columns: #fff;
+    font-family: "Neue Montreal";
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+    justify-content:flex-end ;
+    align-items: center;
+    padding: 0 1em;
+    /* padding-top: 10px; */
+}
+
+.burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 2em;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 0.25em;
+    outline: none;
+    height: 20px;
+    width: 28px;
+    border: none;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+
+}
+
+.burger:before, .burger:after {
+    content: "";
+    width: 28px;
+    height: 1.5px;
+    position: absolute;
+    background: #ffffff;
+    transition: all 250ms ease-out;
+    will-change: transform;
+}
+
+.burger:before {
+    transform: translateY(-3px);
+}
+
+.burger::after {
+    transform: translateY(3px);
+}
+
+.active.burger:before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.burger:hover:before, .burger:hover:after {
+    background: #000;
+}
+
+.burger:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.overlay-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 1.5;
+}
+
+.block {
+    flex: 1;
+    height: 100%;
+    background: #00000076;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    margin-right: -2px;
+}
+
+.overlay-nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 10em 5em;
+    z-index: 2;
+    /* backdrop-filter: blur(10px); */
+}
+
+
+.menu-item {
+    display: flex;
+    padding: 1em;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+
+.menu-item-name {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    /* filter: blur(5px); */
+    a{
+        text-decoration: none;
+    }
+    a:active{
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    }
+}
+
+/* Base styles for the menu item */
+.menu-item-name p {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+}
+
+
+.menu-item-name p:hover {
+    background-color: #f0f0f044;
+    color: black;
+    border-radius: 20px;
+    filter: none;
+    animation: fadeIn 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-item-name p {
+    font-family: "PP Formula";
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: none;
+    width: 100vw;
+    color: rgb(255, 255, 255);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.element::-webkit-scrollbar {
+    display: none;
+}
+
+.button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-86::after,
+  .button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+  }
+  
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+.button-86 {
+    /* margin-top: 20px;
+    margin-left: 589px;      
+    margin-bottom: 100px;   */
+    background-color: #28282d;
+    color: #f0f0f0;          
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    border: none;        
+    cursor: pointer;
+    z-index: 2;       
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+    /* Optional: Add a background color for better visibility */
+    body {
+        transition: background-color 0.3s ease;
+        /* Smooth transition for background color */
+    }
+}

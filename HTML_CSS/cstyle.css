@@ -1,0 +1,229 @@
+@import url(https://db.onlinewebfonts.com/c/26b4978e67a51484ed7bccea1ffb38b8?family=TIMMONSNY-Regular);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #eae9e4;
+    font-family: "Neue Montreal";
+}
+
+button {
+    background: none;
+    outline: none;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+button#toggle {
+    background: #000;
+    color: #fff;
+}
+
+button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.nav, .tagline {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.tagline {
+    bottom: 0;
+}
+
+.links {
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+    display: flex;
+    gap: 1em;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-text h1 {
+    font-family: "TIMMONSNY-Regular";
+    font-size: 20vw;
+    font-weight: lighter;
+}
+
+.cta {
+    margin: 1em 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #262625;
+    display: flex;
+    padding: 1em;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.col:nth-child(1) {
+    flex: 1;
+    height: 100%;
+    border-right: 1.5px solid #eae9e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+
+.col:nth-child(2) {
+    flex: 2;
+    padding: 0 1em;
+}
+
+.logo {
+    width: max-content;
+    border: 1px solid #eae9e4;
+}
+
+.logo a {
+    padding: 0 0.25em;
+    text-decoration: none;
+    color: #eae9e4;
+    text-transform: uppercase;
+}
+
+.about {
+    width: 40%;
+    color: #eae9e4;
+    margin: 1em 0;
+}
+
+.copy {
+    display: flex;
+    justify-content: space-between;
+    color: #eae9e4;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.send {
+    position: absolute;
+    bottom: 0;
+}
+
+.send h1 {
+    color: #eae9e4;
+    font-family: "TIMMONSNY-Regular";
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 400px;
+}
+
+.form label {
+    color: #eae9e4;
+    font-size: 20px;
+}
+
+input[type="text"] {
+    width: 50%;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eae9e4;
+    padding: 0.5em 0;
+    margin: 1em 0;
+    color: #eae9e4;
+}
+
+::placeholder {
+    text-transform: uppercase;
+    color: #eae9e4;
+    font-size: 12px;
+}
+
+.form button {
+    color: #000;
+    background: #eae9e4;
+    border: 1px solid #eae9e4;
+}
+
+.jobs {
+    margin: 1em 0 3em 0;
+    display: flex;
+    gap: 1em;
+}
+
+.job-items label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.item {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.send, .header {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.send h1 span, .header-text h1 span {
+    position: relative;
+    top: 500px;
+}
+
+#back {
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .logo {
+        margin-bottom: 2em;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .overlay {
+        flex-direction: column-reverse;
+    }
+
+    .col:nth-child(1) {
+        border: none;
+    }
+
+    .send {
+        right: 1em;
+    }
+
+    .send h1 {
+        font-size: 150px;
+    }
+}
+
+.element::-webkit-scrollbar {
+    display: none;
+}

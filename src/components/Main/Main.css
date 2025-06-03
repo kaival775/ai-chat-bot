@@ -1,0 +1,501 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    box-sizing: border-box;
+    animation: fadeIn 1.5s;
+}
+
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.main .nav img{
+    border-radius: 50%;
+    width: 40px;
+}
+
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center; /* Center text on mobile */
+}
+
+.main .greet span{
+    /* background:-webkit-linear-gradient(20deg,#4b90ff,#ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+/* Create a conic gradient. */
+    /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+    background: #CA4246;
+    background-color: #CA4246;
+    background: conic-gradient(#CA4246 16.666%,
+            #1132f0 16.666%,
+            #E16541 33.333%,
+            #d48040 33.333%,
+            #f5aa72 50%,
+            #8B9862 50%,
+            #8B9862 66.666%,
+            #476098 66.666%,
+            #85e8fa 83.333%,
+            #A7489B 83.333%);
+
+    /* Set thee background size and repeat properties. */
+    background-size: 57%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+    cursor: pointer;
+}
+@keyframes rainbow-text-animation {
+    0% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+    0% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+}
+.greet span:hover {
+    animation: rainbow-text-animation 0.5s ease forwards;
+}
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+   
+}
+
+.main  .card {
+    height: 170px;
+    padding: 15px;
+    background-color: #f0f4f921;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.main .card img{
+        width: 35px;
+        padding: 5px;
+        position: absolute;
+        background-color: white;
+        border-radius: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+.main .card p{
+        color: #ffffff8a ;
+        background: transparent;
+        font-size: 17px;
+    }
+
+.main .card:hover{
+    background-color: #ffffff44;
+    p{
+        color: #000000;
+    }
+    
+}
+
+.main-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding:0px 20px;
+    margin: auto;
+    z-index: 10;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f927;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+    filter: invert(1);
+    background: transparent;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    color: #c4c7c5;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: transparent;
+}
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.result{
+    padding: 0px 5px;
+    max-height: 70vh;
+    overflow-y: scroll;
+
+    img{
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+
+.result::-webkit-scrollbar
+{
+    display: none;
+}
+
+.result-title{
+    margin:40px 0px;
+    color: #c4c7c5;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-data{
+    display: flex;
+    color: #f0f4f9;
+    gap: 20px;
+    align-items: start;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 128px;
+    /* Adjust as needed */
+    width: 100%;
+    /* Adjust as needed */
+    background-color: black;
+}
+
+.line {
+    height: 2px;
+    background-color: white;
+    width: 30%;
+    padding-left: 50px;
+    margin: 5px 0;
+    animation: moveLine 0.5s linear infinite;
+}
+
+.text {
+    margin-top: 10px;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.text span {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding-bottom: 10vh;
+        box-sizing: border-box;
+        /* Adjusted padding for mobile */
+    }
+
+    .main .nav {
+        font-size: 18px;
+        /* Smaller font size for mobile */
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    .main .nav img {
+        width: 30px;
+        /* Smaller icon size */
+    }
+
+    .main-container {
+        max-width: 100%;
+        /* Full width for mobile */
+    }
+
+    .main .greet {
+        margin: 20px 0;
+        /* Reduced margin */
+        font-size: 36px;
+        /* Adjusted font size for mobile */
+        text-align: center;
+        /* Center text */
+    }
+
+    .main .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* Adjust grid items */
+        gap: 10px;
+        /* Reduced gap */
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    .main .card {
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Reduced padding */
+        border-radius: 10px;
+        /* Adjusted border radius */
+    }
+
+    .main .card img {
+        width: 30px;
+        /* Smaller icon size */
+    }
+
+    .main .card p {
+        font-size: 14px;
+        /* Smaller font size */
+    }
+
+    .main-bottom {
+        background-color: #f0f4f9;
+        /* Ensure visibility */
+        padding: 10px;
+    }
+
+    .search-box {
+        padding: 5px;
+        /* Reduced padding */
+        border-radius: 40px;
+        /* Slightly smaller radius */
+        background-color: #ffffff;
+        /* Ensure visibility */
+    }
+
+    .search-box img {
+        width: 20px;
+        /* Smaller icon size */
+    }
+
+    .search-box input {
+        font-size: 16px;
+        /* Adjusted font size */
+        padding: 6px;
+        /* Reduced padding */
+    }
+
+    .search-box div {
+        gap: 8px;
+        /* Reduced gap */
+    }
+
+    .main .bottom-info {
+        font-size: 12px;
+        /* Smaller font size */
+        margin: 10px 0;
+        /* Reduced margin */
+    }
+
+    .result {
+        padding: 10px;
+        /* Reduced padding */
+        max-height: 60vh;
+        /* Adjusted max-height */
+    }
+
+    .result-title {
+        margin: 20px 0;
+        /* Reduced margin */
+        gap: 10px;
+        /* Reduced gap */
+    }
+
+    .result-data {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 10px;
+        /* Reduced gap */
+    }
+
+    .loader hr {
+        height: 15px;
+        /* Adjusted height */
+    }
+
+    .code-block {
+        padding: 8px;
+        /* Reduced padding */
+        margin: 10px 0;
+        /* Reduced margin */
+    }
+
+    .copy-btn {
+        top: 5px;
+        /* Reduced top */
+        right: 5px;
+        /* Reduced right */
+        padding: 4px 8px;
+        /* Reduced padding */
+    }
+
+    code {
+        font-size: 0.9em;
+        /* Adjusted font size */
+    }
+}
+
+/* Styling for the code block container */
+.code-block {
+    background-color: #2d2d2d;
+    /* Dark background for code */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+    /* Allow horizontal scrolling for long code */
+}
+
+/* Ensure all parts including selected text have the same background */
+.code-block,
+.code-block * {
+    background-color: #2d2d2d !important;
+    /* Force the background color */
+}
+
+/* Styling for the copy button */
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Code styling with indentation and syntax highlighting */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    background-color: inherit;
+    /* Inherit the background color */
+}
+
+code {
+    display: block;
+    color: #f8f8f2;
+    font-size: 0.95em;
+    background-color: inherit;
+    /* Ensure it also gets the same bg */
+}
+
+/* Optional: add styling for text selection within the code block */
+.code-block ::selection {
+    background-color: #444;
+    /* Darker background for selection */
+    color: #f8f8f2;
+    /* Keep the text color consistent */
+}

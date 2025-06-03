@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.menu1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.menu1.is-dragging {
+    cursor: grabbing;
+}
+
+.menu-wrapper1 {
+    list-style: none;
+}
+
+.menu-item1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 0;
+    display: flex;
+    gap: 2em;
+}
+
+.item-name1 {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-name1 p {
+    font-family: "RL-Unno-Trial";
+    font-size: 100px;
+    line-height: 90%;
+}
+
+.element::-webkit-scrollbar {
+    display: none;
+}
