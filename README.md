@@ -30,7 +30,6 @@
 
    ```bash
    git clone https://github.com/kaival775/ai-chat-bot.git
-   cd cybrix-ai
 ```
 
 ##🔑 Set Your Gemini API Key
